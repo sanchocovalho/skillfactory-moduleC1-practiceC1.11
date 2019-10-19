@@ -46,6 +46,10 @@ function startButtonDef() {
     start_stop = false;
 }
 
+function clearMessage(){
+	message.innerHTML = ''
+}
+
 // Обратный отсчет
 function countDown() {
   if (start_stop == false)
@@ -58,6 +62,7 @@ function countDown() {
     message.innerHTML = '<p>Отсчёт закончен...</p>'
     set.disabled = false;
     startButtonDef();
+    setTimeout(clearMessage, 5000);
     ring.play();
     return;
   }
