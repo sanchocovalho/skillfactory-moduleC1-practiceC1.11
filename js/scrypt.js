@@ -249,7 +249,7 @@ function minusButton() {
 // }
 
 function autoDecrement() {
-  globaltimer = setInterval(plusButton,200);
+  globaltimer = setInterval(minusButton,200);
 }
 
 // Уменьшение значений при удержании кнопки
