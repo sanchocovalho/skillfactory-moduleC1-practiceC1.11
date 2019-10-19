@@ -30,6 +30,9 @@ let timeinterval = 0;
 let globaltimer = 0;
 let timeblink = 0;
 
+plus.disabled = true;
+minus.disabled = true;
+
 // Обновление цифр тамера
 function updateText() {
   hours.innerHTML = (0 + String(countHrs)).slice(-2);
@@ -129,6 +132,8 @@ set.onclick = () =>{
   {
     start.disabled = true;
     reset.disabled = true;
+    plus.disabled = false;
+	minus.disabled = false;
     mode = MODE_SECONDS;
     blink = false;
     timeblink = setInterval(timeBlink, 500);
@@ -151,6 +156,8 @@ set.onclick = () =>{
     mode = MODE_DEFAULT;
     clearInterval(timeblink);
     hours.style.color = "rgb(255, 255, 255)";
+    plus.disabled = true;
+	minus.disabled = true;
     start.disabled = false;
     reset.disabled = false;
   }
